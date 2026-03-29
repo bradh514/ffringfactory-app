@@ -3121,8 +3121,8 @@ export default function FFRingFactory() {
   const onAdminOk = () => { setAdminAuthed(true); setShowAdmin(true); };
 
   // Tell Wix iframe to resize to our content height
-  const resizeRef = React.useRef(null);
-  React.useEffect(() => {
+  const resizeRef = useRef(null);
+  useEffect(() => {
     const el = resizeRef.current;
     if (!el) return;
     const ro = new ResizeObserver(() => {
